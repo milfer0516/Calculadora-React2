@@ -1,6 +1,14 @@
 .App {
     margin: 0 auto;
     text-align: center;
+    background-color:#0f0f0f;
+    width: 500px;
+    height: 580px;
+    border-radius: 10px;
+    
+}
+#titulo{
+    color: white;
 }
 .calc-app {
     width: 325px;
