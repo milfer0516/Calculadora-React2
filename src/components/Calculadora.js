@@ -88,10 +88,10 @@ const Calculadora = () => {
                     <button onClick={eventOnclick} id="sumar" name="+">
                         +
                     </button>
-                    <button onClick={eventOnclick} name="21">
+                    <button onClick={eventOnclick} name="1">
                         1
                     </button>
-                    <button onClick={eventOnclick} name="">
+                    <button onClick={eventOnclick} name="2">
                         2
                     </button>
                     <button onClick={eventOnclick} name="3">
