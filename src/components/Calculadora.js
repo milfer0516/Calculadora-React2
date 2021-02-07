@@ -38,13 +38,13 @@ const Calculadora = () => {
                     <button name="" id="reset" onClick={reset}>
                         C
                     </button>
-                    <button onClick={eventOnclick} name="/">
+                    <button onClick={eventOnclick} id="dividir" name="/">
                         /
                     </button>
-                    <button onClick={eventOnclick} name="*">
+                    <button onClick={eventOnclick} id="multiplicar" name="*">
                         *
                     </button>
-                    <button id="clear" onClick={clear}>
+                    <button id="clear" id="clear" onClick={clear}>
                         x
                     </button>
                     <button onClick={eventOnclick} name="7">
@@ -56,7 +56,7 @@ const Calculadora = () => {
                     <button onClick={eventOnclick} name="9">
                         9
                     </button>
-                    <button onClick={eventOnclick} name="-">
+                    <button onClick={eventOnclick} id="restar" name="-">
                         -
                     </button>
                     <button onClick={eventOnclick} name="4">
@@ -68,7 +68,7 @@ const Calculadora = () => {
                     <button onClick={eventOnclick} name="6">
                         6
                     </button>
-                    <button onClick={eventOnclick} name="+">
+                    <button onClick={eventOnclick} id="sumar" name="+">
                         +
                     </button>
                     <button onClick={eventOnclick} name="21">

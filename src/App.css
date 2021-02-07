@@ -18,14 +18,34 @@ input {
     font-size: 30px;
     text-align: center;
     background-color: #f4f6ff;
+    font-weight: 600;
 }
 button {
     border: 0.5 solid black;
     background-color: #f4f6ff;
-    font-size: 25;
+    font-size: 25px;
+    font-weight: 600;
 }
 #result {
     grid-row: 4/6;
     grid-column: 4;
     background-color: #1b6ca8;
+}
+#reset {
+    background-color: #eb5e0b;
+}
+#dividir {
+    background-color: #eb5e0b;
+}
+#restar {
+    background-color: #eb5e0b;
+}
+#multiplicar {
+    background-color: #eb5e0b;
+}
+#clear {
+    background-color: #eb5e0b;
+}
+#sumar {
+    background-color: #eb5e0b;
 }
