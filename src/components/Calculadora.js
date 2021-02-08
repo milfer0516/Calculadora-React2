@@ -52,6 +52,7 @@ const Calculadora = () => {
                 <form>
                     <input type="text" value={resultado} ref={inputRef}></input>
                 </form>
+                <hr></hr>
                 <div className="botones">
                     <button name="" id="reset" onClick={reset}>
                         C
