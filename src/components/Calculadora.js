@@ -46,7 +46,6 @@ const Calculadora = () => {
     return (
         <div className="App">
             <div className="container">
-<<<<<<< HEAD
                 <h1>Calculadora</h1>
 
                 <div className="calc-app">
@@ -58,15 +57,6 @@ const Calculadora = () => {
                         ></input>
                     </form>
                     <hr />
-=======
-            <h1 id="titulo">Calculadora</h1>
-
-                <div className="calc-app">
-                    <form>
-                        <input type="text" value={resultado} ref={inputRef}></input>
-                    </form>
-                    <hr></hr>
->>>>>>> 430d59626064349a9abb7111fc079f86f0230c52
                     <div className="botones">
                         <button name="" id="reset" onClick={reset}>
                             C
@@ -74,15 +64,11 @@ const Calculadora = () => {
                         <button onClick={eventOnclick} id="dividir" name="/">
                             /
                         </button>
-<<<<<<< HEAD
                         <button
                             onClick={eventOnclick}
                             id="multiplicar"
                             name="*"
                         >
-=======
-                        <button onClick={eventOnclick} id="multiplicar" name="*">
->>>>>>> 430d59626064349a9abb7111fc079f86f0230c52
                             *
                         </button>
                         <button id="clear" id="clear" onClick={clear}>
@@ -136,7 +122,6 @@ const Calculadora = () => {
                     </div>
                 </div>
             </div>
-            
         </div>
     );
 };
