@@ -1,7 +1,12 @@
-/* .App {
+.App {
     margin: 0 auto;
     text-align: center;
-} */
+}
+
+#titulo {
+    color: white;
+}
+
 .calc-app {
     width: 325px;
     margin: 0 auto;

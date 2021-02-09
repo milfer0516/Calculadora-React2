@@ -11,6 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } */
+<<<<<<< HEAD
 .container {
     margin: 0 auto;
     width: 380px;
@@ -25,3 +26,19 @@ code {
     margin: 0;
 }
  */
+=======
+
+body{
+  background-color: thistle;
+}
+
+.container
+{
+    margin: 0 auto;
+    text-align: center;
+    background-color:#192146;
+    width: 380px;
+    height: 550px;
+    border-radius: 10px;
+}
+>>>>>>> 430d59626064349a9abb7111fc079f86f0230c52
