@@ -1,48 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 // Se importa los Hooks useState, useRef y useEffect desde React
-import "../App.css";
+import "../assets/css/App.css";
 
-const Calculadora = () => {
-    // Se utiliza el metodo useState pa la captura de los botones y se debe
-    // inicializar como un string vacio y declarando un variable
-    // con su nombre resultado
-    const [resultado, setResultado] = useState("");
-    // En esta linea se declara la variable inputRef haciendo uso useRef en null
-    const inputRef = useRef(null);
-    // Con la variables inputRef se utiliza useEffect con una funcion anonima pero haciendo
-    // haciendo referencia a la variable inputRef y accediendo a su valor actual
-    // con el metodo focus
-    useEffect(() => inputRef.current.focus());
-    // Aca hacemos uso del evento onClick para la captura de cada boton
-    // que hace uso de la propiedad (e) la cual lleva la variable
-    // eventOnclick
-    const eventOnclick = (e) => {
-        // Se llama de useState a setResultado y capturar el valor de resultado con el
-        // metodo concat se accede al evento desde su propiedad name y con la ayuda de.
-        // target
-        setResultado(resultado.concat(e.target.name));
-    };
-    // Con esta funcion hacemos uso del evento borrar un elemento
-    // a la longitud de la variable resultado-length.
-    const clear = () => {
-        setResultado(resultado.slice(0, resultado.length - 1));
-    };
-
-    const reset = () => {
-        setResultado("");
-    };
-    // Para poder acceder al resultado se utiliza las palabras reservadas try y
-    // catch donde try evalua los elementos de resultado y con toString pasa esos
-    // valores de string a un numero entero y con catch capturamos el momento de error
-    // pasandole un valor de error a setResultado.
-    const result = () => {
-        try {
-            setResultado(eval(resultado).toString());
-        } catch (error) {
-            setResultado("Error");
-        }
-    };
-
+const Calculadora = (props) => {
     return (
         <div className="App">
             <div className="container">
@@ -52,71 +12,83 @@ const Calculadora = () => {
                     <form>
                         <input
                             type="text"
-                            value={resultado}
-                            ref={inputRef}
+                            value={props.resultado}
+                            ref={props.inputRef}
                         ></input>
                     </form>
                     <hr />
                     <div className="botones">
-                        <button name="" id="reset" onClick={reset}>
+                        <button name="" id="reset" onClick={props.reset}>
                             C
                         </button>
-                        <button onClick={eventOnclick} id="dividir" name="/">
+                        <button
+                            onClick={props.eventOnclick}
+                            id="dividir"
+                            name="/"
+                        >
                             /
                         </button>
                         <button
-                            onClick={eventOnclick}
+                            onClick={props.eventOnclick}
                             id="multiplicar"
                             name="*"
                         >
                             *
                         </button>
-                        <button id="clear" id="clear" onClick={clear}>
+                        <button id="clear" id="clear" onClick={props.clear}>
                             x
                         </button>
-                        <button onClick={eventOnclick} name="7">
+                        <button onClick={props.eventOnclick} name="7">
                             7
                         </button>
-                        <button onClick={eventOnclick} name="8">
+                        <button onClick={props.eventOnclick} name="8">
                             8
                         </button>
-                        <button onClick={eventOnclick} name="9">
+                        <button onClick={props.eventOnclick} name="9">
                             9
                         </button>
-                        <button onClick={eventOnclick} id="restar" name="-">
+                        <button
+                            onClick={props.eventOnclick}
+                            id="restar"
+                            name="-"
+                        >
                             -
                         </button>
-                        <button onClick={eventOnclick} name="4">
+                        <button onClick={props.eventOnclick} name="4">
                             4
                         </button>
-                        <button onClick={eventOnclick} name="5">
+                        <button onClick={props.eventOnclick} name="5">
                             5
                         </button>
-                        <button onClick={eventOnclick} name="6">
+                        <button onClick={props.eventOnclick} name="6">
                             6
                         </button>
-                        <button onClick={eventOnclick} id="sumar" name="+">
+                        <button
+                            onClick={props.eventOnclick}
+                            id="sumar"
+                            name="+"
+                        >
                             +
                         </button>
-                        <button onClick={eventOnclick} name="1">
+                        <button onClick={props.eventOnclick} name="1">
                             1
                         </button>
-                        <button onClick={eventOnclick} name="2">
+                        <button onClick={props.eventOnclick} name="2">
                             2
                         </button>
-                        <button onClick={eventOnclick} name="3">
+                        <button onClick={props.eventOnclick} name="3">
                             3
                         </button>
-                        <button id="result" onClick={result} name="=">
+                        <button id="result" onClick={props.result} name="=">
                             =
                         </button>
-                        <button onClick={eventOnclick} name="%">
+                        <button onClick={props.eventOnclick} name="%">
                             %
                         </button>
-                        <button onClick={eventOnclick} name="0">
+                        <button onClick={props.eventOnclick} name="0">
                             0
                         </button>
-                        <button onClick={eventOnclick} name=".">
+                        <button onClick={props.eventOnclick} name=".">
                             .
                         </button>
                     </div>
